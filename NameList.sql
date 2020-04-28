@@ -1,5 +1,5 @@
 create  table StarLight(
-KEY_NO int NOT NULL,
+KEY_NO int NOT NULL PRIMARY KEY,
 name varchar(255),
 birthday varchar(255),
 Soleil int(1)
@@ -20,7 +20,7 @@ VALUES
 
   
 create  table DreamAcademy(
-KEY_NO int NOT NULL,
+KEY_NO int NOT NULL PRIMARY KEY,
 name varchar(255),
 birthday varchar(255),
 Brand　varchar(255),
