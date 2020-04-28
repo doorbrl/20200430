@@ -9,14 +9,14 @@ Brand　varchar(255),
 
 -- 複数レコード一括INSERT
 INSERT INTO StarLight
-  (KEY_NO, name, birthday, Soleil, Luminous, Brand)
+  (KEY_NO, name, birthday, Soleil, Luminas, Brand)
 VALUES 
-  (1, '星宮いちご', '3月15日', 1, 0, 'AngerySugar'),
-  (2, '霧矢あおい', '1月31日', 1, 0, 'FuturingGIRL'),
-  (3, '紫吹蘭', '8月3日', 1, 0, 'SpicyAGEHA'),
-  (4, '大空あかり', '4月1日', 0, 1, 'DreamyCROWN'),
-  (5, '氷上スミレ', '', 0, 1, 'LoliGothic'),
-  (6, '新条ひなき', '', 0, 1, 'VividKiss');
+  (1, '星宮いちご', '3月15日', 1, 0, 'Angely Sugar'),
+  (2, '霧矢あおい', '1月31日', 1, 0, 'FUTURING GIRL'),
+  (3, '紫吹蘭', '8月3日', 1, 0, 'SPICY AGEHA'),
+  (4, '大空あかり', '4月1日', 0, 1, 'Dreamy Crown'),
+  (5, '氷上スミレ', '10月20日', 0, 1, 'LoLi GoThiC'),
+  (6, '新条ひなき', '6月11日', 0, 1, 'Vivid Kiss');
 
   
 create  table DreamAcademy(
@@ -30,14 +30,14 @@ Brand　varchar(255),
 INSERT INTO DreamAcademy
   (KEY_NO, name, birthday, Brand)
 VALUES 
-  (1, '音城セイラ', '3月15日', 'AngerySugar'),
-  (2, '冴草きい', '1月31日', 'FuturingGIRL'),
-  (3, '風沢そら', '8月3日', 'SpicyAGEHA'),
-  (4, '姫里マリア', '4月1日', 'DreamyCROWN');
+  (1, '音城セイラ', '11月11日', 'Swing ROCK'),
+  (2, '冴草きい', '12月3日', 'MAGICAL TOY'),
+  (3, '風沢そら', '	10月2日', 'BOHEMIAN SKY'),
+  (4, '姫里マリア', '4月1日', 'Aurora Fantasy');
 
 -- 外部結合 FULL OUTER JOIN
 SELECT * FROM StarLight FULL OUTER JOIN DreamAcademy ON StarLight.id = DreamAcademy.id;
 
 -- from句にある副問合せ
 select * from (select * from StarLight where Soleil = 1)
-where Brand ='AngerySugar';
+where Brand ='Angely Sugar';
