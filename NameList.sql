@@ -37,3 +37,7 @@ VALUES
 
 -- 外部結合 FULL OUTER JOIN
 SELECT * FROM StarLight FULL OUTER JOIN DreamAcademy ON StarLight.id = DreamAcademy.id;
+
+-- from句にある副問合せ
+select * from (select * from StarLight where Soleil = 1)
+where Brand ='AngerySugar';
