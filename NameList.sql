@@ -4,7 +4,7 @@ name varchar(255),
 birthday varchar(255),
 Soleil varchar(2),
 Luminous varchar(2),
-Brand　varchar(255)
+Brand varchar(50)
 );
 
 -- 複数レコード一括INSERT
@@ -32,7 +32,7 @@ create  table DreamAcademy(
 KEY_NO int NOT NULL PRIMARY KEY,
 name varchar(255),
 birthday varchar(255),
-Brand　varchar(255),
+Brand varchar(50)
 );
 
 -- 複数レコード一括INSERT
