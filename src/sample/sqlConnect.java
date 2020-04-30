@@ -53,6 +53,11 @@ public class sqlConnect {
 					}else {
 						System.out.println("ルミナス：-");
 					}
+					if(rs.getString("STAR☆ANIS").equals("1")) {
+						System.out.println("STAR☆ANIS ;〇");
+					}else {
+						System.out.println("STAR☆ANIS ：-");
+					}
 				}
 			}
 			System.out.println("---------------END-----------------");

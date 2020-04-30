@@ -21,4 +21,5 @@ public class DtoStarLight {
 
 	private String Brand;
 
+	private String STARANIS;
 }
