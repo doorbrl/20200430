@@ -23,13 +23,17 @@ public class sqlConnect {
 			Connection conn = DriverManager.getConnection(driver,user,password);
 
 			Statement st = conn.createStatement();
+			Statement stForDA = conn.createStatement();
 			if(st != null) {
 				System.out.println("接続完了");
 			}
 
 			//SELECT文を取得、実行
 			String select = PropertyUtil.getProperty("select_starlight");
+			String selectDA = PropertyUtil.getProperty("select_dreamacademy");
+
 			PreparedStatement ps = conn.prepareStatement(select);
+			PreparedStatement psForDA = conn.prepareStatement(selectDA);
 
 			System.out.println("---------------START-----------------");
 			try(ResultSet rs = ps.executeQuery()){
@@ -52,11 +56,26 @@ public class sqlConnect {
 				}
 			}
 			System.out.println("---------------END-----------------");
+
+			System.out.println("---------------ドリアカSTART-----------------");
+			try(ResultSet rsDA = psForDA.executeQuery()){
+				while (rsDA.next()) {
+					System.out.println(
+							"No." +rsDA.getInt("KEY_NO") + " " +
+									"名前：" +rsDA.getString("name") + " " +
+									"誕生日："+rsDA.getString("birthday")+ " "+
+									"好きなブランド："+rsDA.getString("Brand"));
+				}
+			}
+
+			System.out.println("---------------ドリアカEND-----------------");
 		} catch (ClassNotFoundException e) {
 			System.out.println("ドライバを読み込めませんでした "+ e);
 		} catch (SQLException e) {
 			System.out.println("データベース接続エラー"+ e);
 
 		}
+
+
 	}
 }
