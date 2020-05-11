@@ -13,13 +13,13 @@ public class DtoStarLight {
 
 	private String name;
 
-	private int birthday;
+	private String birthday;
 
-	private String Soleil;
+	private int Soleil;
 
-	private String Luminas;
+	private int Luminas;
 
 	private String Brand;
 
-	private String STARANIS;
+	private int STARANIS;
 }
