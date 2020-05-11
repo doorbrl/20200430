@@ -43,17 +43,17 @@ public class sqlConnect {
 									"名前：" +rs.getString("name") + " " +
 									"誕生日："+rs.getString("birthday")+ " "+
 									"好きなブランド："+rs.getString("Brand"));
-					if(rs.getString("Soleil").equals("1")) {
+					if(rs.getInt("Soleil") == 1) {
 						System.out.println("ソレイユ：〇");
 					}else {
 						System.out.println("ソレイユ：-");
 					}
-					if(rs.getString("Luminas").equals("1")) {
+					if(rs.getInt("Luminas")== 1) {
 						System.out.println("ルミナス;〇");
 					}else {
 						System.out.println("ルミナス：-");
 					}
-					if(rs.getString("STAR☆ANIS").equals("1")) {
+					if(rs.getInt("STAR☆ANIS")== 1) {
 						System.out.println("STAR☆ANIS ;〇");
 					}else {
 						System.out.println("STAR☆ANIS ：-");
