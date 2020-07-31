@@ -2,8 +2,8 @@ CREATE TABLE StarLight(
 KEY_NO int NOT NULL PRIMARY KEY,
 name varchar(255),
 birthday varchar(255),
-Soleil varchar(2),
-Luminous varchar(2),
+Soleil int(1),
+Luminous int(1),
 Brand varchar(50)
 );
 
