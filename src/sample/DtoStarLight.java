@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 public class DtoStarLight {
 
-	private int id;
+	private String gene;
 
 	private String name;
 
@@ -22,4 +22,6 @@ public class DtoStarLight {
 	private String Brand;
 
 	private String STARANIS;
+	
+	
 }
