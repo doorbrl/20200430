@@ -3,7 +3,7 @@ gene varchar(1) NOT NULL PRIMARY KEY,
 name varchar(255),
 birthday varchar(255),
 Soleil int(1),
-Luminous int(1),
+Luminas int(1),
 Tristar int(1),
 StarAnis int(1),
 Brand varchar(50)
